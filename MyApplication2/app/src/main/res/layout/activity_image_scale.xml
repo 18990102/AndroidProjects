@@ -7,6 +7,7 @@
     tools:context=".ImageScaleActivity">
 
     <ImageView
+
         android:id="@+id/iv_scale"
         android:layout_width="match_parent"
         android:layout_height="200dp"
@@ -18,10 +19,11 @@
 
     <Button
         android:id="@+id/btn_centerInside"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:layout_height="45dp"
         android:layout_marginStart="10dp"
         android:layout_marginLeft="10dp"
+        android:background="@drawable/bt_drawable"
         android:text="center_Inside"
         app:layout_constraintBottom_toBottomOf="@+id/btn_centerCrop"
         app:layout_constraintEnd_toEndOf="parent"
@@ -31,12 +33,13 @@
 
     <Button
         android:id="@+id/btn_centerCrop"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:layout_height="45dp"
         android:layout_marginStart="10dp"
         android:layout_marginLeft="10dp"
         android:layout_marginEnd="10dp"
         android:layout_marginRight="10dp"
+        android:background="@drawable/bt_drawable"
         android:text="center_Crop"
         app:layout_constraintBottom_toBottomOf="@+id/btn_fitCenter"
         app:layout_constraintEnd_toStartOf="@+id/btn_centerInside"
@@ -45,11 +48,12 @@
 
     <Button
         android:id="@+id/btn_fitCenter"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:layout_height="45dp"
         android:layout_marginTop="72dp"
         android:layout_marginEnd="10dp"
         android:layout_marginRight="10dp"
+        android:background="@drawable/bt_drawable"
         android:text="fit_Center"
         app:layout_constraintEnd_toStartOf="@+id/btn_centerCrop"
         app:layout_constraintStart_toStartOf="parent"
@@ -57,13 +61,10 @@
 
     <Button
         android:id="@+id/btn_center"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginLeft="10dp"
+        android:layout_width="80dp"
+        android:layout_height="45dp"
         android:layout_marginTop="20dp"
-        android:layout_marginEnd="5dp"
-        android:layout_marginRight="5dp"
+        android:background="@drawable/bt_drawable"
         android:text="center"
         app:layout_constraintEnd_toStartOf="@+id/btn_fitXY"
         app:layout_constraintStart_toStartOf="parent"
@@ -71,12 +72,13 @@
 
     <Button
         android:id="@+id/btn_fitXY"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="80dp"
+        android:layout_height="45dp"
         android:layout_marginStart="5dp"
         android:layout_marginLeft="5dp"
         android:layout_marginEnd="5dp"
         android:layout_marginRight="5dp"
+        android:background="@drawable/bt_drawable"
         android:text="fit_XY"
         app:layout_constraintBottom_toBottomOf="@+id/btn_center"
         app:layout_constraintEnd_toStartOf="@+id/btn_fitStart"
@@ -85,12 +87,13 @@
 
     <Button
         android:id="@+id/btn_fitStart"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="80dp"
+        android:layout_height="45dp"
         android:layout_marginStart="5dp"
         android:layout_marginLeft="5dp"
         android:layout_marginEnd="5dp"
         android:layout_marginRight="5dp"
+        android:background="@drawable/bt_drawable"
         android:text="fit_Start"
         app:layout_constraintBottom_toBottomOf="@+id/btn_fitXY"
         app:layout_constraintEnd_toStartOf="@+id/btn_fitEnd"
@@ -99,12 +102,13 @@
 
     <Button
         android:id="@+id/btn_fitEnd"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="80dp"
+        android:layout_height="45dp"
         android:layout_marginStart="5dp"
         android:layout_marginLeft="5dp"
         android:layout_marginEnd="10dp"
         android:layout_marginRight="10dp"
+        android:background="@drawable/bt_drawable"
         android:text="fit_End"
         app:layout_constraintBottom_toBottomOf="@+id/btn_fitStart"
         app:layout_constraintEnd_toEndOf="parent"
