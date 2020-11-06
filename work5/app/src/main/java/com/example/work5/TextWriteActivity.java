@@ -1,4 +1,4 @@
-package com.example.work5.util;
+package com.example.work5;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -13,7 +13,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.work5.util.DateUtil;
+import com.example.work5.util.DataUtil;
 import com.example.work5.util.FileUtil;
 
 public class TextWriteActivity extends AppCompatActivity implements View.OnClickListener {
@@ -31,7 +31,7 @@ public class TextWriteActivity extends AppCompatActivity implements View.OnClick
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_text_write);
 
-        et_name = findViewById(R.id.id_name);
+        et_name = findViewById(R.id.et_name);
         et_age = findViewById(R.id.et_age);
         et_height = findViewById(R.id.et_height);
         et_weight = findViewById(R.id.et_weight);
@@ -81,11 +81,9 @@ public class TextWriteActivity extends AppCompatActivity implements View.OnClick
             content = String.format("%s　身高：%scm\n", content, height);
             content = String.format("%s　体重：%skg\n", content, weight);
             content = String.format("%s　婚否：%s\n", content, bMarried);
-            content = String.format("%s　注册时间：%s\n", content, DateUtil.getNowDateTime("yyyy-MM-dd HH:mm:ss"));
-
-            // 检查SD卡状态,存储媒体已经挂载，并且挂载点可读/写。
+            content = String.format("%s　注册时间：%s\n", content, DataUtil.getNowDateTime("yyyy-MM-dd HH:mm:ss"));
             if (Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED)) {
-                String file_path = mPath + DateUtil.getNowDateTime("") + ".txt";
+                String file_path = mPath + DataUtil.getNowDateTime("") + ".txt";
                 // 把文本字符串保存为文本文件
                 FileUtil.saveText(file_path, content);
                 tv_path.setText("用户注册信息文件的保存路径为：\n" + file_path);

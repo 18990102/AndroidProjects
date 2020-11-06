@@ -1,4 +1,4 @@
-package com.example.work5.util;
+package com.example.work5;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -15,8 +15,8 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.homework004.util.DateUtil;
-import com.example.homework004.util.FileUtil;
+import com.example.work5.util.DataUtil;
+import com.example.work5.util.FileUtil;
 
 public class ImageWriteActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -38,7 +38,7 @@ public class ImageWriteActivity extends AppCompatActivity implements View.OnClic
         // 布局id
         cl_info = findViewById(R.id.cl_info);
 
-        et_name = findViewById(R.id.id_name);
+        et_name = findViewById(R.id.et_name);
         et_age = findViewById(R.id.et_age);
         et_height = findViewById(R.id.et_height);
         et_weight = findViewById(R.id.et_weight);
@@ -85,7 +85,7 @@ public class ImageWriteActivity extends AppCompatActivity implements View.OnClic
             if (Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED)) {
                 // 获取布局cl_info绘图缓存中的位图数据
                 Bitmap bitmap = cl_info.getDrawingCache();
-                String file_path = mPath + DateUtil.getNowDateTime("") + ".png";
+                String file_path = mPath + DataUtil.getNowDateTime("") + ".png";
                 // 把位图数据保存为图片文件
                 FileUtil.saveImage(file_path, bitmap);
                 // 回收位图对象

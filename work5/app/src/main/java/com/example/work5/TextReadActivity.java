@@ -1,4 +1,4 @@
-package com.example.work5.util;
+package com.example.work5;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -12,7 +12,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.homework004.util.FileUtil;
+import com.example.work5.util.FileUtil;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -31,7 +31,6 @@ public class TextReadActivity extends AppCompatActivity implements View.OnClickL
         tv_text = findViewById(R.id.tv_text);
         sp_file = findViewById(R.id.sp_file);
         findViewById(R.id.btn_delete).setOnClickListener(this);
-
         // 获取当前App的私有存储目录
         mPath = getExternalFilesDir(Environment.DIRECTORY_DOWNLOADS).toString() + "/";
         if (Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED)) {
@@ -102,4 +101,3 @@ public class TextReadActivity extends AppCompatActivity implements View.OnClickL
         Toast.makeText(this, desc, Toast.LENGTH_SHORT).show();
     }
 }
-
